@@ -25,6 +25,24 @@ Dự án xây dựng hệ thống ERP hỗ trợ cho một doanh nghiệp gia đ
 ## Thông tin cấu hình database
 - Odoo sử dụng user `codespace` và password `codespace` để kết nối PostgreSQL (xem odoo.conf: db_user, db_password).
 
-## Quy định sử dụng README.md
-- README.md dùng để ghi lại các thông tin quan trọng về dự án, cấu trúc, quy trình, hướng dẫn cài đặt, thay đổi lớn.
-- Mỗi khi có thay đổi quan trọng (thêm, xóa, sửa module, cấu hình, quy trình...), cập nhật README.md.
+## Chức năng chính của hệ thống MinhLongAuto
+- Tab Bảng điều khiển: Hiển thị tổng quan hệ thống (nội dung sẽ bổ sung sau).
+- Tab Sản phẩm: Hiển thị danh sách sản phẩm, vật phẩm của gara (dùng module inventory, product).
+- Tab Báo giá: Quản lý, tạo mới, in báo giá cho các công việc đã làm (dùng module sale, invoice).
+- Tab Khách hàng: Quản lý danh sách khách hàng (dùng module contact), quản lý thông tin phương tiện (cần phát triển mới).
+
+## Các module Odoo yêu cầu
+- contact
+- sale
+- inventory
+- web
+- invoice
+
+## Phần cần phát triển mới
+## Phần cần phát triển mới
+- Module MinhLongAuto: giao diện 3 tab (Sản phẩm, Báo giá, Khách hàng), quản lý thông tin phương tiện (xe) của khách hàng, các quy trình đặc thù cho gara.
+- Đã tạo module MinhLongAuto với cấu trúc cơ bản, giải quyết lỗi External ID not found bằng cách tách actions vào file riêng và sắp xếp thứ tự load.
+- Module đã được cài đặt và hoạt động thành công.
+- Đã sửa lỗi menu không hiển thị bằng cách thêm thuộc tính groups="base.group_user".
+- Đã sửa lỗi module bị kẹt ở trạng thái "installing" bằng cách reset trạng thái trong database.
+- Đã sửa lỗi dashboard bằng cách đơn giản hóa view để tránh reference đến các view không tồn tại.

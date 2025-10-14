@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="minhlongauto_menu" name="MinhLongAuto" sequence="1" groups="base.group_user"/>
+    
+    <menuitem id="minhlongauto_dashboard_menu" name="Dashboard" parent="minhlongauto_menu" action="minhlongauto.dashboard_action" sequence="1" groups="base.group_user"/>
+    <menuitem id="minhlongauto_products_menu" name="Sản phẩm" parent="minhlongauto_menu" action="minhlongauto.products_action" sequence="2" groups="base.group_user"/>
+    <menuitem id="minhlongauto_quotations_menu" name="Báo giá" parent="minhlongauto_menu" action="minhlongauto.quotations_action" sequence="3" groups="base.group_user"/>
+    <menuitem id="minhlongauto_customers_menu" name="Khách hàng" parent="minhlongauto_menu" sequence="4" groups="base.group_user"/>
+    
+    <menuitem id="minhlongauto_customers_list_menu" name="Khách hàng" parent="minhlongauto_customers_menu" action="minhlongauto.customers_action" sequence="1" groups="base.group_user"/>
+    <menuitem id="minhlongauto_vehicles_menu" name="Phương tiện" parent="minhlongauto_customers_menu" action="minhlongauto.vehicles_action" sequence="2" groups="base.group_user"/>
+</odoo>

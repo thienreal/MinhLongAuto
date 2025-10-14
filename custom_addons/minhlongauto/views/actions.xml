@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard Action -->
+    <record id="dashboard_action" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('customer_rank', '>', 0)]</field>
+    </record>
+
+    <!-- Products Action -->
+    <record id="products_action" model="ir.actions.act_window">
+        <field name="name">Sản phẩm</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('type', 'in', ['product', 'consu'])]</field>
+        <field name="context">{'default_type': 'product'}</field>
+    </record>
+
+    <!-- Quotations Action -->
+    <record id="quotations_action" model="ir.actions.act_window">
+        <field name="name">Báo giá</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state', 'in', ['draft', 'sent'])]</field>
+        <field name="context">{'default_type': 'sale'}</field>
+    </record>
+
+    <!-- Customers Action -->
+    <record id="customers_action" model="ir.actions.act_window">
+        <field name="name">Khách hàng</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('customer_rank', '>', 0)]</field>
+        <field name="context">{'default_customer_rank': 1}</field>
+    </record>
+
+    <!-- Vehicles Action -->
+    <record id="vehicles_action" model="ir.actions.act_window">
+        <field name="name">Phương tiện</field>
+        <field name="res_model">minhlongauto.vehicle</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+{
+    'name': 'MinhLongAuto',
+    'version': '1.0',
+    'category': 'Custom',
+    'summary': 'Module for MinhLongAuto garage management',
+    'description': 'Custom module for managing garage operations including products, quotations, customers, and vehicles.',
+    'author': 'MinhLongAuto Team',
+    'license': 'LGPL-3',
+    'depends': ['base', 'web', 'contacts', 'sale', 'stock', 'account'],
+    'data': [
+        'views/products.xml',
+        'views/quotations.xml',
+        'views/customers.xml',
+        'views/vehicles.xml',
+        'views/actions.xml',
+        'views/menu.xml',
+    ],
+    'installable': True,
+    'application': True,
+}

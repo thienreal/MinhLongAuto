@@ -11,6 +11,14 @@ Xây dựng hệ thống ERP cho gara ô tô nhỏ, sử dụng Odoo 19 và tíc
 4. Tích hợp các giải pháp AI phù hợp.
 5. Kiểm thử, đào tạo, triển khai thực tế.
 
+## Trạng thái hiện tại
+- Đã tạo module MinhLongAuto với 4 tab: Dashboard, Sản phẩm, Báo giá, Khách hàng.
+- Sử dụng các module Odoo chuẩn: contacts, sale, inventory, web, account.
+- Đã giải quyết lỗi External ID và cài đặt thành công module.
+- Đã sửa lỗi menu không hiển thị bằng cách thêm thuộc tính groups="base.group_user".
+- Đã sửa lỗi module bị kẹt ở trạng thái "installing" bằng cách reset trạng thái trong database.
+- Đã sửa lỗi dashboard bằng cách đơn giản hóa view để tránh reference đến các view không tồn tại.
+
 ## Lưu ý tích hợp AI
 - Ưu tiên các bài toán AI thực tế: nhận diện lỗi xe, dự báo phụ tùng, chatbot.
 - Đảm bảo dữ liệu đầu vào chất lượng.

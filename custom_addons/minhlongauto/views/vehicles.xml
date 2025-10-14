@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="minhlongauto_vehicle_tree" model="ir.ui.view">
+        <field name="name">minhlongauto.vehicle.tree</field>
+        <field name="model">minhlongauto.vehicle</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="license_plate"/>
+                <field name="make"/>
+                <field name="model"/>
+                <field name="year"/>
+                <field name="customer_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="minhlongauto_vehicle_form" model="ir.ui.view">
+        <field name="name">minhlongauto.vehicle.form</field>
+        <field name="model">minhlongauto.vehicle</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="license_plate"/>
+                        <field name="make"/>
+                        <field name="model"/>
+                        <field name="year"/>
+                        <field name="customer_id"/>
+                        <field name="vin"/>
+                        <field name="color"/>
+                        <field name="mileage"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
