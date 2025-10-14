@@ -1,0 +1,19 @@
+
+# Copilot Instruction
+
+## Mục tiêu
+Xây dựng hệ thống ERP cho gara ô tô nhỏ, sử dụng Odoo 19 và tích hợp AI để tối ưu hóa vận hành, quản lý và chăm sóc khách hàng.
+
+## Quy trình phát triển
+1. Xác định nghiệp vụ và quy trình gara.
+2. Lựa chọn và cấu hình các module Odoo cần thiết.
+3. Phát triển các addon tùy chỉnh (đặt trong custom_addons).
+4. Tích hợp các giải pháp AI phù hợp.
+5. Kiểm thử, đào tạo, triển khai thực tế.
+
+## Lưu ý tích hợp AI
+- Ưu tiên các bài toán AI thực tế: nhận diện lỗi xe, dự báo phụ tùng, chatbot.
+- Đảm bảo dữ liệu đầu vào chất lượng.
+
+## Hướng dẫn cấu hình
+- Sử dụng file odoo.conf để cấu hình hệ thống, user database, đường dẫn addon.
