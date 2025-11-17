@@ -5,7 +5,6 @@
         <field name="model">minhlongauto.vehicle</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
                 <field name="license_plate"/>
                 <field name="make"/>
                 <field name="model"/>
@@ -22,12 +21,11 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
                         <field name="license_plate"/>
+                        <field name="customer_id"/>
                         <field name="make"/>
                         <field name="model"/>
                         <field name="year"/>
-                        <field name="customer_id"/>
                         <field name="vin"/>
                         <field name="color"/>
                         <field name="mileage"/>

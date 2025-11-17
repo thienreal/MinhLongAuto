@@ -1,4 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Quotations views and customizations will be added here -->
+    <!-- Enhanced Sale Order Form View for MinhLongAuto -->
+    <record id="view_order_form_minhlongauto" model="ir.ui.view">
+        <field name="name">sale.order.form.minhlongauto</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            
+            <!-- Add Vehicle field after partner_id -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="vehicle_id" 
+                       domain="[('customer_id', '=', partner_id)]"
+                       context="{'default_customer_id': partner_id}"
+                       options="{'no_create': True}"/>
+            </xpath>
+
+            <!-- Add Statistics Summary Section before Order Lines -->
+            <xpath expr="//notebook" position="before">
+                <group name="order_statistics" string="📊 Tổng quan báo giá" class="oe_subtotal_footer_separator">
+                    <group>
+                        <group string="Số lượng">
+                            <div class="o_row">
+                                <label for="product_count" string="🔲 Hàng hóa:"/>
+                                <field name="product_count" class="oe_inline"/>
+                                <span class="text-muted">sản phẩm</span>
+                            </div>
+                            <div class="o_row">
+                                <label for="service_count" string="⚙️ Dịch vụ:"/>
+                                <field name="service_count" class="oe_inline"/>
+                                <span class="text-muted">dịch vụ</span>
+                            </div>
+                            <div class="o_row">
+                                <label for="combo_count" string="🎁 Combo:"/>
+                                <field name="combo_count" class="oe_inline"/>
+                                <span class="text-muted">combo</span>
+                            </div>
+                        </group>
+                        <group string="Tổng tiền">
+                            <field name="product_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="service_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="combo_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                    </group>
+                </group>
+            </xpath>
+
+            <!-- Hide default_code in product fields context -->
+            <xpath expr="//field[@name='order_line']//field[@name='product_template_id']" position="attributes">
+                <attribute name="context">{
+                    'default_list_price': price_unit,
+                    'default_uom_id': product_uom_id,
+                    'display_default_code': False,
+                }</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//field[@name='product_id']" position="attributes">
+                <attribute name="context">{
+                    'default_lst_price': price_unit,
+                    'default_uom_id': product_uom_id,
+                    'display_default_code': False,
+                }</attribute>
+            </xpath>
+
+        </field>
+    </record>
 </odoo>

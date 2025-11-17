@@ -2,6 +2,10 @@
 ## Mục đích dự án
 Dự án xây dựng hệ thống ERP hỗ trợ cho một doanh nghiệp gia đình nhỏ hoạt động trong lĩnh vực gara sửa xe ô tô. Mục tiêu là quản lý toàn bộ quy trình vận hành, tối ưu hóa hoạt động, nâng cao hiệu quả và trải nghiệm khách hàng, tận dụng Odoo 19 và các giải pháp AI hiện đại.
 
+Postgres server (development): 127.0.0.1:5432
+- Default database used for this workspace: MinhLongAuto
+- DB user: codespace (see `odoo.conf` for credentials)
+
 ## Kế hoạch và các bước thực hiện
 1. Xác định nhu cầu và quy trình nghiệp vụ gara: quản lý khách hàng, xe, lịch sửa chữa, kho phụ tùng, hóa đơn, nhân sự, báo cáo tài chính, chăm sóc khách hàng.
 2. Lên danh sách các module Odoo cần dùng: base, web, mail, crm, sale, purchase, inventory, account, hr, project, các module tùy chỉnh cho gara ô tô, AI hỗ trợ chẩn đoán lỗi, dự báo tồn kho, chatbot.

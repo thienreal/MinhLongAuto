@@ -8,6 +8,7 @@
     'license': 'LGPL-3',
     'depends': ['base', 'web', 'contacts', 'sale', 'stock', 'account'],
     'data': [
+        'security/ir.model.access.csv',
         'views/products.xml',
         'views/quotations.xml',
         'views/customers.xml',

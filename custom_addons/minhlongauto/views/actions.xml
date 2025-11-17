@@ -8,13 +8,18 @@
         <field name="domain">[('customer_rank', '>', 0)]</field>
     </record>
 
-    <!-- Products Action -->
+    <!-- Products Action - Use same config as Inventory > Products > Products -->
     <record id="products_action" model="ir.actions.act_window">
         <field name="name">Sản phẩm</field>
         <field name="res_model">product.product</field>
-        <field name="view_mode">list,form</field>
-        <field name="domain">[('type', 'in', ['product', 'consu'])]</field>
-        <field name="context">{'default_type': 'product'}</field>
+        <field name="view_mode">kanban,list,form,activity</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new product
+            </p>
+        </field>
     </record>
 
     <!-- Quotations Action -->
@@ -23,7 +28,7 @@
         <field name="res_model">sale.order</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[('state', 'in', ['draft', 'sent'])]</field>
-        <field name="context">{'default_type': 'sale'}</field>
+        <field name="context">{'default_type': 'sale', 'display_default_code': False}</field>
     </record>
 
     <!-- Customers Action -->
